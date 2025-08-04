@@ -1,7 +1,7 @@
 import { Link } from "wouter";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import mediagenyLogo from "@assets/mediageny-logo.png";
+
 
 export default function Home() {
   return (
@@ -82,11 +82,9 @@ export default function Home() {
           <Card className="bg-gradient-to-r from-primary to-blue-600 text-white">
             <CardContent className="py-8">
               <div className="flex flex-col items-center mb-4">
-                <img 
-                  src={mediagenyLogo} 
-                  alt="MEDIAGENY SOFTWARE SOLUTIONS" 
-                  className="h-16 mb-4 object-contain"
-                />
+                <div className="h-16 w-24 mb-4 bg-white/20 rounded-lg flex items-center justify-center">
+                  <span className="text-white font-bold text-lg">MEDIAGENY</span>
+                </div>
                 <i className="fas fa-qrcode text-4xl"></i>
               </div>
               <h2 className="text-2xl font-bold mb-2">QR Code Ordering</h2>

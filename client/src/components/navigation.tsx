@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { logout, getCurrentUser } from "@/lib/auth";
 import { useToast } from "@/hooks/use-toast";
-import qrkhanaLogo from "@assets/qrkhana-logo.png";
+
 
 export default function Navigation() {
   const [location] = useLocation();
@@ -41,11 +41,9 @@ export default function Navigation() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center">
-            <img 
-              src={qrkhanaLogo} 
-              alt="QRkhana" 
-              className="h-8 w-auto mr-3 object-contain"
-            />
+            <div className="h-8 w-8 mr-3 bg-blue-600 rounded-lg flex items-center justify-center">
+              <span className="text-white font-bold text-sm">QR</span>
+            </div>
             <Link href="/">
               <h1 className="text-xl font-semibold text-gray-900 cursor-pointer">
                 QRKhana Software

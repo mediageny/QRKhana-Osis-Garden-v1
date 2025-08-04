@@ -10,7 +10,7 @@ import { useToast } from "@/hooks/use-toast";
 import { formatCurrency } from "@/lib/currency";
 import { apiRequest } from "@/lib/queryClient";
 import type { MenuItem, MenuCategory, Table } from "@shared/schema";
-import qrkhanaLogo from "@assets/qrkhana-logo.png";
+
 
 interface CartItem extends MenuItem {
   quantity: number;
@@ -238,11 +238,9 @@ export default function CustomerOrder() {
           <Card className="w-full max-w-md mx-4">
             <CardHeader className="text-center">
               <div className="mx-auto mb-6">
-                <img 
-                  src={qrkhanaLogo} 
-                  alt="QRkhana" 
-                  className="h-40 w-auto mx-auto object-contain mb-6"
-                />
+                <div className="h-40 w-40 mx-auto bg-blue-600 rounded-lg flex items-center justify-center mb-6">
+                  <span className="text-white font-bold text-2xl">QR</span>
+                </div>
               </div>
               <CardTitle className="text-2xl font-bold">Welcome to Osie Garden</CardTitle>
               <p className="text-lg text-gray-700 font-medium">{table?.name || `Table ${tableNumber}`}</p>
